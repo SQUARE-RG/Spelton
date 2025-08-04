@@ -3,14 +3,14 @@ Spelton
 
 A Static Checker for Memory-Related Bugs Triggered with C++ Smart Pointers
 
-* [Download the Spelton Tool](#): (SHA256SUM 568c1a6e7573876ba75f614bb8956eb285729552a00a3dfc3214db3e23f69141)
+* [Download the Spelton Tool](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/spelton-x86_64-centos7-clang900-ase2021.tar.xz): (SHA256SUM 568c1a6e7573876ba75f614bb8956eb285729552a00a3dfc3214db3e23f69141)
 
 * Download the benchmark in Table III
-  - [Imitated Snippets](#): (SHA256SUM 5e7e5d74a50d67385e9c7c01b7df3eaba5e90c3bdd9c3b8e3a92897ad4b88945)
-  - [Mutated Snippets](#): (SHA256SUM fae86aa471b81a4a93960ab205d3c035e109b8418aa5e69854ef9f813a7974d7)
+  - [Imitated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/imitated.tar.xz): (SHA256SUM 5e7e5d74a50d67385e9c7c01b7df3eaba5e90c3bdd9c3b8e3a92897ad4b88945)
+  - [Mutated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/mutated.tar.xz): (SHA256SUM fae86aa471b81a4a93960ab205d3c035e109b8418aa5e69854ef9f813a7974d7)
 
-* [Download the generator for imitated snippets](#): (SHA256SUM e72b56cdf56d4b9f41a67b6fc1f540f2995741cc4ae2741977d11931b8337395)
-  - Source code of the generator is stored in sub-director [generator](#)
+* [Download the generator for imitated snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/generator-of-imitated-snippets.tar.xz): (SHA256SUM e72b56cdf56d4b9f41a67b6fc1f540f2995741cc4ae2741977d11931b8337395)
+  - Source code of the generator is stored in sub-director [generator](https://github.com/SQUARE-RG/Spelton/tree/main/generator)
 
 * The benchmark in Table IV:
   - https://github.com/zsiciarz/aquila              (commit: d5e3bde3c8d07678a95f225b657a7bb23d0c4730)
