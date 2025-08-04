@@ -181,8 +181,9 @@ def Generate():
         with pool(opt.jobs) as p:
             p.starmap(GenerateOne, joblist)
     import shutil
-    shutil.copy(os.path.join(opt.templates, 'std_testcase.cpp'), opt.output)
+    shutil.copy(os.path.join(opt.templates, 'std_testcase.cc'), opt.output)
     shutil.copy(os.path.join(opt.templates, 'std_testcase.h'), opt.output)
+    shutil.copy(os.path.join(opt.templates, 'makefile'), opt.output)
 
 
 def main():

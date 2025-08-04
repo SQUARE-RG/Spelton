@@ -6,10 +6,10 @@ A Static Checker for Memory-Related Bugs Triggered with C++ Smart Pointers
 * [Download the Spelton Tool](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/spelton-x86_64-centos7-clang900-ase2021.tar.xz): (SHA256SUM 568c1a6e7573876ba75f614bb8956eb285729552a00a3dfc3214db3e23f69141)
 
 * Download the benchmark in Table III
-  - [Imitated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/imitated.tar.xz): (SHA256SUM 5e7e5d74a50d67385e9c7c01b7df3eaba5e90c3bdd9c3b8e3a92897ad4b88945)
-  - [Mutated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/mutated.tar.xz): (SHA256SUM fae86aa471b81a4a93960ab205d3c035e109b8418aa5e69854ef9f813a7974d7)
+  - [Imitated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/imitated.tar.xz): (SHA256SUM 8b6157b9230cd7b171405dd0ba091a4f62cea3de5d341702e4ea51595bbcc94c)
+  - [Mutated Snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/mutated.tar.xz): (SHA256SUM 7d823cab91a52aa8cfa52073b9a5820d19f1269e8463a176e1c79dd915f42cf6)
 
-* [Download the generator for imitated snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/generator-of-imitated-snippets.tar.xz): (SHA256SUM e72b56cdf56d4b9f41a67b6fc1f540f2995741cc4ae2741977d11931b8337395)
+* [Download the generator for imitated snippets](https://github.com/SQUARE-RG/Spelton/releases/download/ASE-2021/generator-of-imitated-snippets.tar.xz): (SHA256SUM 337e19f9540645c79e7318e505fc4274bb1403a8500716aeee6196d8a95a16f3)
   - Source code of the generator is stored in sub-director [generator](https://github.com/SQUARE-RG/Spelton/tree/main/generator)
 
 * The benchmark in Table IV:
@@ -135,3 +135,10 @@ This chapter provides a recommended analysis workflow, using the MySQL and Aria2
    Specify the input file list as the `input.ifl` file in the current directory, use the `clang-extdef-mapping` program to generate the CTU index file, and then use the analyzer executable program to analyze all the translation units on the list. After analysis, call the report index generation tool to generate an index for the report folder.
 
    If an error occurs during the generation of the CTU index file, users can re-execute the last step. In this case, the incomplete CTU index file will continue to be generated, and once it is completed, the code analysis will start. The code analysis process will not fail and will not produce errors, even if crashes occur during analysis. Please be patient during the last few files of the analysis, as it may take a long time to complete. After the analysis is finished, users can check the log to identify files where crashes occurred during analysis.
+
+Usage of Handmade Snippets
+---------------------------
+
+In the released packages, a makefile is provided to compile the source files and help to generate the compilation database for the test snippets. After the compilation database is generated, the snippets can be analyzed via the `driver` scheduler similar to analyze a project repository.
+
+The buggy sites to be reported can be found from the `positives.txt` files in the root or sub directories of a package. The locations not mentioned in this file or mentioned in `negatives.txt` file should not be reported and can be considered as bug-free usages.
