@@ -21,7 +21,7 @@ A Static Checker for Memory-Related Bugs Triggered with C++ Smart Pointers
   - https://github.com/corvusoft/restbed            (commit: 03f1f2391fc8cd00f599ea368e472f1455bd575c)
   - https://github.com/gabime/spdlog                (commit: 3dedb52163c4aa052dee61ea3de126c72faa02a8)
   - https://github.com/mysql/mysql-server           (commit: ee4455a33b10f1b1886044322e4893f587b319ed)
-  - https://github.com/llvm-project/llvm            (commit: bbd4ebffd4a634a9256f5eb33b3cce06ade8d809, subproject: clang flang llvm mlir)
+  - https://github.com/llvm/llvm-project            (commit: bbd4ebffd4a634a9256f5eb33b3cce06ade8d809, subproject: clang flang llvm mlir)
 
 Installation
 --------------
