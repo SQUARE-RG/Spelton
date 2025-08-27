@@ -142,3 +142,17 @@ Usage of Handmade Snippets
 In the released packages, a makefile is provided to compile the source files and help to generate the compilation database for the test snippets. After the compilation database is generated, the snippets can be analyzed via the `driver` scheduler similar to analyze a project repository.
 
 The buggy sites to be reported can be found from the `positives.txt` files in the root or sub directories of a package. The locations not mentioned in this file or mentioned in `negatives.txt` file should not be reported and can be considered as bug-free usages.
+
+Trouble Shooting
+-----------------
+
+* Python2 interpreter is not available: Please update `spelton/lib/genidx/genidx.py` with [`python3.patch`](python3.patch).
+
+```
+/root/of/spelton$ ls
+bin  lib
+/root/of/spelton$ patch -p2 </path/to/python3.patch
+patching file lib/genidx/genidx.py
+/root/of/spelton$ head -n 1 bin/genidx
+#!/usr/bin/python3
+```

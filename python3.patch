@@ -1,0 +1,41 @@
+--- a/spelton/lib/genidx/genidx.py
++++ b/spelton/lib/genidx/genidx.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/python3
+ 
+ import re
+ import os
+@@ -33,7 +33,7 @@
+ def scanFile(filename):
+     bug = BugReport()
+     try:
+-        f = file(filename)
++        f = open(filename)
+         while True:
+             line = f.readline()
+             m = re.match('<!-- BUGTYPE (.*) -->', line)
+@@ -254,8 +254,8 @@
+                     report_dir + os.sep + filenames[1])
+ 
+ def usage():
+-    print '''Usage: genidx.py <dir>
+-<dir> is the directory that contains the bug reports.'''
++    print('''Usage: genidx.py <dir>
++<dir> is the directory that contains the bug reports.''')
+ 
+ def main(argv):
+     if len(argv) > 2:
+@@ -267,10 +267,10 @@
+     else:
+         report_dir = argv[1]
+     if os.path.exists(report_dir) == False:
+-        print 'No such directory:', report_dir
++        print('No such directory:', report_dir)
+         sys.exit(0)
+ 
+-    f = file(report_dir + os.sep + 'index.html', 'w')
++    f = open(report_dir + os.sep + 'index.html', 'w')
+     generateIndex(report_dir, f, argv[0])
+     print('The index.html of bug reports has been successfully generated.')
+     f.close()
